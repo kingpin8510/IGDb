@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import clientApi from "../services/client-api";
+import { CanceledError } from "axios";
 
 interface game {
   id: number;
@@ -16,12 +17,21 @@ function useGames() {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    const controller = new AbortController();
+
     clientApi
-      .get<fetchgames>("https://api.rawg.io/api/games")
+      .get<fetchgames>("https://api.rawg.io/api/games", {
+        signal: controller.signal,
+      })
       .then((res) => {
         setGames(res.data.results);
       })
-      .catch((err) => setError(err.message));
+      .catch((err) => {
+        if (err instanceof CanceledError) return;
+        setError(err.message);
+      });
+
+    return () => controller.abort();
   }, []);
 
   return { games, error };
