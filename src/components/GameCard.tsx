@@ -1,6 +1,7 @@
-import { Card, CardBody, Heading, Image } from "@chakra-ui/react";
+import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import { game } from "../hooks/useGames";
-import PlatformIcons from "./PlatformIcons";
+import CriticScore from "./criticScore";
+// import PlatformIcons from "./PlatformIcons";
 
 interface Props {
   game: game;
@@ -12,10 +13,18 @@ const GameCard = ({ game }: Props) => {
       <Image src={game.background_image} />
       <CardBody>
         <Heading fontSize="2xl">{game.name}</Heading>
+        <HStack> 
         {/* <PlatformIcons platforms={game.parent_platform.map(p => p.platform)}></PlatformIcons> 
-            an error occurs at the map part in the platformicons.tsx file
+            
+            ->an error occurs at the map part in the platformicons.tsx file
             error still unchecked
+
+            ->Here the hstack is implemented to organize them into one line
+
+            <hstack justifycontent={'space around'}></hstack>
         */}
+        <CriticScore score={game.metacritic} ></CriticScore>
+        </HStack>
       </CardBody>
     </Card>
   );
