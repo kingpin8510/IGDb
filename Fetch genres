@@ -1,0 +1,95 @@
+[33mcommit 8176f2d5400c5dd9b845410786e032fda351fe17[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Wed Feb 7 00:43:54 2024 +0530
+
+    Fetch Genres
+
+[33mcommit b5c3ade83d74bc08b9eed54049f7582bc4934e53[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Wed Feb 7 00:30:38 2024 +0530
+
+    Refactor: remove duplicated styles
+
+[33mcommit 1dd49ff7a816abbc9ccede1fa4c9e4ff1d12edfe[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Wed Feb 7 00:14:38 2024 +0530
+
+    Show loading skeleton
+
+[33mcommit b9cdb7c2b6cd61bc5469294b38222aafbabd9370[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Tue Feb 6 17:03:50 2024 +0530
+
+    Get optimized images
+
+[33mcommit 9be827bfb483265411bc8e2773e33109dc26beed[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Tue Feb 6 16:56:16 2024 +0530
+
+    Getting Critic score
+
+[33mcommit 9b784faa3aa0c2deba29124b9636832a1f143f37[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Mon Feb 5 17:01:39 2024 +0530
+
+    Platform Icons ( error unchecked )
+
+[33mcommit d994f642a7c8115bb374ef637e9ffaa78a1fee5f[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Mon Feb 5 12:08:09 2024 +0530
+
+    Building Game cards
+
+[33mcommit c74156ea4e92204865fcab4447db60bc1e051fc2[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Sun Feb 4 12:27:28 2024 +0530
+
+    Custom hook to fetch games
+
+[33mcommit 729054092df14644333a70757b418e9cecd414b1[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Sun Feb 4 12:16:00 2024 +0530
+
+    update on fetch games
+
+[33mcommit 6348fe2300a164cb5356cec41f6d10ad54c45e29[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Sun Feb 4 00:42:04 2024 +0530
+
+    Fetching games
+
+[33mcommit 3db357a4829fa03bb839f2fe2d3f354c6e6b3d01[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Sat Feb 3 23:56:46 2024 +0530
+
+    colour mode switch
+
+[33mcommit 18f9c49d4c0e50f5dc572ee5ed30ffe8343d5073[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Sat Feb 3 12:32:01 2024 +0530
+
+    Setting Dark Mode
+
+[33mcommit a2255dc8dadb1f1baf24c4512887c363de463c00[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Sat Feb 3 12:16:37 2024 +0530
+
+    Build a NavBar
+
+[33mcommit 347335275264e67f2e6926bc37f4074b20c88315[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Sat Feb 3 11:48:01 2024 +0530
+
+    Build a responsive layout
+
+[33mcommit d70d11aef240df77b9528b71f81cb23f7f8bf2e5[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Fri Feb 2 16:03:48 2024 +0530
+
+    Installed Chakra UI
+
+[33mcommit a03cec244fa61b18e1c06775065dcc751bd8bafa[m
+Author: kingpin8510 <rp240479@gmail.com>
+Date:   Fri Feb 2 12:41:55 2024 +0530
+
+    initial commit
