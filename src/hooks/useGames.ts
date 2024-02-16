@@ -1,5 +1,5 @@
-
 import useData from "./useData";
+import { Genre } from "./useGenres";
 
 export interface platform {
   id: number;
@@ -15,7 +15,10 @@ export interface game {
   metacritic: number;
 }
 
-
-
-const useGames = () => useData<game>('https://api.rawg.io/api/games');
+const useGames = (selectedGenre: Genre | null) =>
+  useData<game>(
+    "https://api.rawg.io/api/games",
+    { params: { genres: selectedGenre?.id } }
+    ,[selectedGenre?.id]
+  );
 export default useGames;
