@@ -15,10 +15,13 @@ export interface game {
   metacritic: number;
 }
 
-const useGames = (selectedGenre: Genre | null) =>
+const useGames = (
+  selectedGenre: Genre | null,
+  selectedPlatform: platform | null
+) =>
   useData<game>(
     "https://api.rawg.io/api/games",
-    { params: { genres: selectedGenre?.id } }
-    ,[selectedGenre?.id]
+    { params: { genres: selectedGenre?.id, platforms: selectedPlatform?.id } },
+    [selectedGenre?.id, selectedPlatform?.id]
   );
 export default useGames;
