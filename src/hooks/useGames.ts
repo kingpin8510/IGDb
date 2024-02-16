@@ -1,3 +1,4 @@
+import { GameQuery } from "../App";
 import useData from "./useData";
 import { Genre } from "./useGenres";
 
@@ -16,12 +17,13 @@ export interface game {
 }
 
 const useGames = (
-  selectedGenre: Genre | null,
-  selectedPlatform: platform | null
+  // selectedGenre: Genre | null,
+  // selectedPlatform: platform | null
+  gameQuery: GameQuery
 ) =>
   useData<game>(
     "https://api.rawg.io/api/games",
-    { params: { genres: selectedGenre?.id, platforms: selectedPlatform?.id } },
-    [selectedGenre?.id, selectedPlatform?.id]
+    { params: { genres: gameQuery.genre?.id, platforms: gameQuery.platform?.id } },
+    [gameQuery] // dependencies are handled by just one, as it will be rendered and refreshed
   );
 export default useGames;

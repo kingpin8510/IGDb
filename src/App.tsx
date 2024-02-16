@@ -7,9 +7,17 @@ import { Genre } from "./hooks/useGenres";
 import PlatformSelector from "./components/PlatformSelector";
 import { platform } from "./hooks/useGames";
 
+export interface GameQuery{
+  genre: Genre | null;
+  platform: platform | null; 
+
+}
+
 const App = () => {
-  const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
-  const [selectedPlatform, setSelectedPlatform] = useState<platform | null>(null); 
+
+  const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
+  // const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
+  // const [selectedPlatform, setSelectedPlatform] = useState<platform | null>(null); "says this code looks ugly"
   //To check if the hooks are working or not go for the components in the dev tools of chrome
 
   return (
@@ -29,12 +37,12 @@ const App = () => {
         </GridItem>
         <Show above="lg">
           <GridItem area="aside" paddingX={"8px"}>
-            <GenreList selectedGenre={selectedGenre} onSelectGenre={(genre) => setSelectedGenre(genre)} />
+            <GenreList selectedGenre={gameQuery.genre} onSelectGenre={(genre) => setGameQuery({...gameQuery, genre})} />
           </GridItem>
         </Show>
         <GridItem area="main">
-          <PlatformSelector selectedPlatform={selectedPlatform} onSelectPlatform={(platform) => setSelectedPlatform(platform)} />
-          <GameGrid selectedPlatform={selectedPlatform} selectedGenre={selectedGenre} />
+          <PlatformSelector selectedPlatform={gameQuery.platform} onSelectPlatform={(platform) => setGameQuery({...gameQuery, platform})} />
+          <GameGrid gameQuery={gameQuery}/>
         </GridItem>
       </Grid>
     </div>
