@@ -23,7 +23,13 @@ const useGames = (
 ) =>
   useData<game>(
     "https://api.rawg.io/api/games",
-    { params: { genres: gameQuery.genre?.id, platforms: gameQuery.platform?.id } },
+    {
+      params: {
+        genres: gameQuery.genre?.id,
+        platforms: gameQuery.platform?.id,
+        ordering: gameQuery.sortOrder
+      },
+    },
     [gameQuery] // dependencies are handled by just one, as it will be rendered and refreshed
   );
 export default useGames;
