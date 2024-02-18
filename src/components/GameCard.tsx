@@ -13,8 +13,8 @@ const GameCard = ({ game }: Props) => {
     <Card>
       <Image src={getCroppedImage(game.background_image)} />
       <CardBody>
-        <Heading fontSize="2xl">{game.name}</Heading>
-        <HStack> 
+
+        <HStack marginBottom={3}>
         {/* <PlatformIcons platforms={game.parent_platform.map(p => p.platform)}></PlatformIcons> 
             
             ->an error occurs at the map part in the platformicons.tsx file
@@ -26,6 +26,7 @@ const GameCard = ({ game }: Props) => {
         */}
         <CriticScore score={game.metacritic} ></CriticScore>
         </HStack>
+        <Heading fontSize="2xl">{game.name}</Heading>
       </CardBody>
     </Card>
   );
