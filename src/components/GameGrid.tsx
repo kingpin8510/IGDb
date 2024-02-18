@@ -5,13 +5,13 @@ import GameCard from "./GameCard";
 import GameCardContainer from "./GameCardContainer";
 import { GameQuery } from "../App";
 
-interface Props{
+interface Props {
   gameQuery: GameQuery;
   // selectedGenre: Genre | null;
   // selectedPlatform: platform | null;
 }
 
-function GameGrid({gameQuery}: Props) {
+function GameGrid({ gameQuery }: Props) {
   const { data, error, isLoading } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6];
 

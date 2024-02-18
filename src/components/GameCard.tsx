@@ -2,6 +2,7 @@ import { Card, CardBody, HStack, Heading, Image } from "@chakra-ui/react";
 import { game } from "../hooks/useGames";
 import CriticScore from "./criticScore";
 import getCroppedImage from "../services/image-url";
+import Emoji from "./Emoji";
 // import PlatformIcons from "./PlatformIcons";
 
 interface Props {
@@ -13,9 +14,8 @@ const GameCard = ({ game }: Props) => {
     <Card>
       <Image src={getCroppedImage(game.background_image)} />
       <CardBody>
-
         <HStack marginBottom={3}>
-        {/* <PlatformIcons platforms={game.parent_platform.map(p => p.platform)}></PlatformIcons> 
+          {/* <PlatformIcons platforms={game.parent_platform.map(p => p.platform)}></PlatformIcons> 
             
             ->an error occurs at the map part in the platformicons.tsx file
             error still unchecked
@@ -24,9 +24,9 @@ const GameCard = ({ game }: Props) => {
 
             <hstack justifycontent={'space around'}></hstack>
         */}
-        <CriticScore score={game.metacritic} ></CriticScore>
+          <CriticScore score={game.metacritic}></CriticScore>
         </HStack>
-        <Heading fontSize="2xl">{game.name}</Heading>
+        <Heading fontSize="2xl">{game.name}<Emoji rating={game.rating_top}/></Heading>
       </CardBody>
     </Card>
   );
