@@ -26,7 +26,8 @@ const useGames = (
       params: {
         genres: gameQuery.genre?.id,
         platforms: gameQuery.platform?.id,
-        ordering: gameQuery.sortOrder
+        ordering: gameQuery.sortOrder,
+        search: gameQuery.searchText
       },
     },
     [gameQuery] // dependencies are handled by just one, as it will be rendered and refreshed
