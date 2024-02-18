@@ -1,5 +1,5 @@
 
-import useData from "./useData";
+import genres from "../Data/genres";
 
 export interface Genre{
     id: number;
@@ -8,6 +8,9 @@ export interface Genre{
 }
 
 
-const useGenres = () => useData<Genre>('https://api.rawg.io/api/genres');
+// const useGenres = () => useData<Genre>('https://api.rawg.io/api/genres');
+//Have to use the shipping method so as to remove the loading sign
+
+const useGenres = () => ({ data: genres, isLoading: false, error: null});
 
 export default useGenres;
