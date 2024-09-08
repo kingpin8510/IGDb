@@ -52,8 +52,8 @@ To get a local copy up and running, follow these steps:
 
 This website is inspired from the site **https://rawg.io/**
 
-##Upcoming Updates
+## Upcoming Updates
 
--Aimimg tutorials with hand alignment.
--Bigger description screen.
--library feature with login authentication.
+- Aimimg tutorials with hand alignment.
+- Bigger description screen.
+- Library feature with login authentication.
